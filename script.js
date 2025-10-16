@@ -5,7 +5,7 @@ const incBtn = document.getElementById("inc");
 const decBtn = document.getElementById("dec");
 const resetBtn = document.getElementById("reset");
 
-function render() {
+function render() { 
   countEl.textContent = count;
 }
 
@@ -15,9 +15,11 @@ incBtn.addEventListener("click", () => {
 });
 
 decBtn.addEventListener("click", () => {
-  count--;
-  render();
-});
+  if (count > 0) {
+    count--
+    render()
+  }
+})
 
 resetBtn.addEventListener("click", () => {
   count = 0;
